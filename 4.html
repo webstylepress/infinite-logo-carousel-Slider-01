@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Infinite Carousel</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<style>
+			body {
+				margin: 60px 0;
+			}
+			.centered {
+				display: flex;
+				justify-content: center;
+			}
+			.main-heading {
+				text-align: center;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 40px;
+			}
+			.bx-wrapper {
+				box-shadow: none !important;
+			}
+			.bx-slider {
+				display: none;
+				margin: 0 auto;
+			}
+			.bx-slider div img {
+				margin: 0 auto !important;
+				max-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="main-heading">Infinite Carousel (BX Slider)</h1>
+
+		<div class="centered">
+			<div class="bx-slider">
+				<div><img src="1.svg" alt="" /></div>
+				<div><img src="2.svg" alt="" /></div>
+				<div><img src="3.svg" alt="" /></div>
+				<div><img src="4.svg" alt="" /></div>
+				<div><img src="5.svg" alt="" /></div>
+				<div><img src="6.svg" alt="" /></div>
+				<div><img src="7.svg" alt="" /></div>
+				<div><img src="8.svg" alt="" /></div>
+				<div><img src="9.svg" alt="" /></div>
+				<div><img src="1.svg" alt="" /></div>
+				<div><img src="2.svg" alt="" /></div>
+				<div><img src="3.svg" alt="" /></div>
+				<div><img src="4.svg" alt="" /></div>
+				<div><img src="5.svg" alt="" /></div>
+				<div><img src="6.svg" alt="" /></div>
+				<div><img src="7.svg" alt="" /></div>
+				<div><img src="8.svg" alt="" /></div>
+				<div><img src="9.svg" alt="" /></div>
+				<div><img src="1.svg" alt="" /></div>
+				<div><img src="2.svg" alt="" /></div>
+				<div><img src="3.svg" alt="" /></div>
+				<div><img src="4.svg" alt="" /></div>
+				<div><img src="5.svg" alt="" /></div>
+				<div><img src="6.svg" alt="" /></div>
+				<div><img src="7.svg" alt="" /></div>
+				<div><img src="8.svg" alt="" /></div>
+				<div><img src="9.svg" alt="" /></div>
+			</div>
+		</div>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css"
+			integrity="sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/vendor/jquery.easing.1.3.min.js"
+			integrity="sha512-c3P5zhXP2jm1GF26Hxqy3PrK72lRwWM8n6l+Abg80ppGalU8D7pxGucnbrU/2MkBTMOe5Xmxe20i4vpaaLaBYQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"
+			integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script>
+			$('.bx-slider').hide();
+			$(document).ready(function () {
+				$('.bx-slider').fadeIn('slow');
+				$('.bx-slider').bxSlider({
+					mode: 'horizontal', // 'horizontal' or 'vertical' or 'fade'
+					speed: 500,
+					slideMargin: 0,
+					randomStart: false,
+					infiniteLoop: true,
+					hideControlOnEnd: false,
+					easing: 'ease-in-out', // 'linear', 'ease', 'ease-in', 'ease-out', 'swing'
+					ticker: true,
+					tickerHover: false,
+					adaptiveHeight: false,
+					video: false, // this makes videos responsive with jquery.fitvids.js
+					touchEnabled: true,
+					wrapperClass: 'bx-wrapper',
+
+					pager: false,
+					pagerType: 'full',
+					pagerShortSeparator: ' / ',
+
+					controls: false,
+					nextText: 'Next',
+					prevText: 'Prev',
+
+					autoControls: true,
+					startText: 'Start',
+					stopText: 'Stop',
+					autoControlsCombine: false,
+
+					keyboardEnabled: true,
+					auto: true, // auto move
+					autoStart: true,
+					autoHover: true, // stop on hover
+
+					minSlides: 2, // minimum slides > 2,3,4 > no. of slides
+					maxSlides: 5, // max slides
+					moveSlides: 1, // 0 for default
+					slideWidth: 200,
+					slideMargin: 2,
+
+					responsive: true,
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Infinite Carousel</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<style>
+			body {
+				margin: 60px 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			.main-heading {
+				text-align: center;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 40px;
+			}
+			.flexslider {
+				display: none;
+			}
+			.flexslider div img {
+				margin: 0 auto !important;
+				max-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="main-heading">Infinite Carousel (Flex Slider)</h1>
+
+		<div class="flexslider">
+			<ul class="slides">
+				<li><img src="1.svg" alt="" /></li>
+				<li><img src="2.svg" alt="" /></li>
+				<li><img src="3.svg" alt="" /></li>
+				<li><img src="4.svg" alt="" /></li>
+				<li><img src="5.svg" alt="" /></li>
+				<li><img src="6.svg" alt="" /></li>
+				<li><img src="7.svg" alt="" /></li>
+				<li><img src="8.svg" alt="" /></li>
+				<li><img src="9.svg" alt="" /></li>
+				<li><img src="1.svg" alt="" /></li>
+				<li><img src="2.svg" alt="" /></li>
+				<li><img src="3.svg" alt="" /></li>
+				<li><img src="4.svg" alt="" /></li>
+				<li><img src="5.svg" alt="" /></li>
+				<li><img src="6.svg" alt="" /></li>
+				<li><img src="7.svg" alt="" /></li>
+				<li><img src="8.svg" alt="" /></li>
+				<li><img src="9.svg" alt="" /></li>
+				<li><img src="1.svg" alt="" /></li>
+				<li><img src="2.svg" alt="" /></li>
+				<li><img src="3.svg" alt="" /></li>
+				<li><img src="4.svg" alt="" /></li>
+				<li><img src="5.svg" alt="" /></li>
+				<li><img src="6.svg" alt="" /></li>
+				<li><img src="7.svg" alt="" /></li>
+				<li><img src="8.svg" alt="" /></li>
+				<li><img src="9.svg" alt="" /></li>
+			</ul>
+		</div>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css"
+			integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"
+			integrity="sha512-BmoWLYENsSaAfQfHszJM7cLiy9Ml4I0n1YtBQKfx8PaYpZ3SoTXfj3YiDNn0GAdveOCNbK8WqQQYaSb0CMjTHQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script>
+			$('.flexslider').hide();
+			$(document).ready(function () {
+				$('.flexslider').fadeIn('slow');
+				$('.flexslider').flexslider({
+					animation: 'slide',
+
+					itemWidth: 320,
+					itemMargin: 2,
+					minItems: 1,
+					maxItems: 5,
+
+					// move one item at a time
+					move: 1,
+					slideshow: 1,
+
+					// animation: "fade",
+
+					// easing: "swing",
+					// direction: "vertical", // direction: "horizontal",
+
+					smoothHeight: false,
+					//animationSpeed: "600",
+					randomize: false,
+					pauseOnHover: true,
+					useCSS: true,
+					touch: true,
+					keyboard: true,
+
+					// dots
+					controlNav: false,
+					// continuous scroll
+					animationLoop: true,
+
+					// auto loop
+					slideshow: true,
+					slideshowSpeed: '3000',
+					// pausePlay: false
+				});
+			});
+		</script>
+	</body>
+</html>

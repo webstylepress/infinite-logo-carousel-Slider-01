@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Infinite Carousel</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<style>
+			body {
+				margin: 60px 0;
+			}
+			.main-heading {
+				text-align: center;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 40px;
+			}
+			.owl-logos {
+				display: none;
+			}
+			.owl-logos div img {
+				margin: 0 auto !important;
+				max-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="main-heading">Infinite Carousel (Owl Carousel)</h1>
+
+		<div class="owl-carousel owl-theme owl-logos">
+			<div><img src="1.svg" alt="" /></div>
+			<div><img src="2.svg" alt="" /></div>
+			<div><img src="3.svg" alt="" /></div>
+			<div><img src="4.svg" alt="" /></div>
+			<div><img src="5.svg" alt="" /></div>
+			<div><img src="6.svg" alt="" /></div>
+			<div><img src="7.svg" alt="" /></div>
+			<div><img src="8.svg" alt="" /></div>
+			<div><img src="9.svg" alt="" /></div>
+			<div><img src="1.svg" alt="" /></div>
+			<div><img src="2.svg" alt="" /></div>
+			<div><img src="3.svg" alt="" /></div>
+			<div><img src="4.svg" alt="" /></div>
+			<div><img src="5.svg" alt="" /></div>
+			<div><img src="6.svg" alt="" /></div>
+			<div><img src="7.svg" alt="" /></div>
+			<div><img src="8.svg" alt="" /></div>
+			<div><img src="9.svg" alt="" /></div>
+			<div><img src="1.svg" alt="" /></div>
+			<div><img src="2.svg" alt="" /></div>
+			<div><img src="3.svg" alt="" /></div>
+			<div><img src="4.svg" alt="" /></div>
+			<div><img src="5.svg" alt="" /></div>
+			<div><img src="6.svg" alt="" /></div>
+			<div><img src="7.svg" alt="" /></div>
+			<div><img src="8.svg" alt="" /></div>
+			<div><img src="9.svg" alt="" /></div>
+		</div>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+			integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+			integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+			integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script>
+			$('.owl-carousel').hide();
+			$(document).ready(function () {
+				$('.owl-carousel').fadeIn('slow');
+				$('.owl-logos').owlCarousel({
+					items: 5,
+					loop: true,
+					margin: 10,
+					mouseDrag: true,
+					touchDrag: true,
+					pullDrag: true,
+					nav: false,
+					dots: false,
+					autoplay: true,
+					autoplayHoverPause: true,
+
+					//navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+
+					// effects //
+
+					// for fade instead of slide, enable below line
+					// animateOut: 'fadeOut',
+
+					// flip animation // 2 lines below
+					// animateOut: 'slideOutDown',
+					// animateIn: 'flipInX',
+
+					responsive: {
+						0: {
+							items: 1,
+							dots: false,
+						},
+						600: {
+							items: 3,
+							dots: false,
+						},
+						1000: {
+							items: 5,
+							dots: false,
+						},
+					},
+				});
+				// enable arrows keys navigation
+				$(document.documentElement).keyup(function (event) {
+					if (event.keyCode == 37) {
+						$('#owl-logos .owl-prev').trigger('click');
+					} else if (event.keyCode == 39) {
+						$('#owl-logos .owl-next').trigger('click');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
